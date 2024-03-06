@@ -1,0 +1,879 @@
+<nav class="bg-stone-50">
+  <!-- "min-[570px]:text-center max-[767px]:bg-sky-300" -->
+  <div
+    class="grid grid-cols-3 md:grid-cols-10 lg:grid-cols-12 gap-0 md:justify-center xl:w-8/12 mx-auto"
+  >
+    <div
+      class="grid items-center grid-cols-2 lg:col-span-7 lg:grid-cols-7 col-span-1 md:col-span-2"
+    >
+      <!-- LOGO -->
+      <div
+        class="flex lg:col-span-2 items-center p-0 md:py-2 order-2 lg:order-1 xl:order-1"
+      >
+        <a href="" class="">
+          <img
+            class="lg:w-full lg:flex hidden"
+            src="../../../../../assets/images/Sumaq_Style.png"
+            alt="logo_1"
+          />
+          <img
+            class="flex lg:hidden w-8 md:w-10"
+            src="../../../../../assets/images/logo.png"
+            alt="logo_2"
+          />
+        </a>
+      </div>
+
+      <!-- MENU LG-XL-->
+      <div
+        class="md:col-span-5 items-center justify-evenly w-full order-2 p-2 lg:flex hidden"
+      >
+        <ul class="flex flex-col font-medium text-lg">
+          <li>
+            <button
+              id="mega-menu-dropdown-button-men"
+              data-dropdown-toggle="mega-menu-dropdown-men"
+              class="w-full p-2 font-medium rounded-lg"
+              [ngClass]="
+                isActive('men') ? 'bg-red-600 text-stone-50' : 'text-stone-600'
+              "
+              (click)="toggleButton('men')"
+            >
+              Hombre
+            </button>
+            <div
+              id="mega-menu-dropdown-men"
+              class="absolute z-10 w-screen text-sm pt-2"
+              [class.hidden]="!dropdowns['men']"
+            >
+              <div class="border shadow-md bg-stone-50">
+                <div
+                  class="grid grid-cols-3 lg:w-full lg:p-2 xl:w-8/12 mx-auto"
+                >
+                  <div class="grid col-span-2 grid-cols-3 pr-14">
+                    <div class="p-4 text-gray-500">
+                      <a href="" class="text-gray-900 text-lg">Mujer</a>
+                      <ul class="grid lg:grid-cols-1 xl:grid-cols-2 gap-2 pt-2">
+                        <li>
+                          <a href="#"> Polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Poleras </a>
+                        </li>
+                        <li>
+                          <a href="#"> Joggers y busos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de poleras </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="p-4 text-gray-500">
+                      <a href="" class="text-gray-900 text-lg">Hombre</a>
+                      <ul class="grid lg:grid-cols-1 xl:grid-cols-2 gap-2 pt-2">
+                        <li>
+                          <a href="#"> Polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Poleras </a>
+                        </li>
+                        <li>
+                          <a href="#"> Joggers y busos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de poleras </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="p-4 text-gray-500">
+                      <a href="" class="text-gray-900 text-lg">Niño</a>
+                      <ul class="grid lg:grid-cols-1 xl:grid-cols-2 gap-2 pt-2">
+                        <li>
+                          <a href="#"> Polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Poleras </a>
+                        </li>
+                        <li>
+                          <a href="#"> Joggers y busos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de poleras </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="grid col-span-1 grid-cols-2">
+                    <h3 class="text-gray-600 p-2 col-span-2">
+                      Encuentra el modelo perfecto para ti, los mejores
+                      productos con un simple click.
+                    </h3>
+
+                    <div class="flex justify-center">
+                      <img
+                        class="xl:w-36 lg:w-28 lg:h-5/6"
+                        src="../../../../../assets/images/modelo_hombre.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex justify-center">
+                      <img
+                        class="xl:w-36 lg:w-28 lg:h-5/6"
+                        src="../../../../../assets/images/modelo_mujer.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-1/12 mx-auto justify-center">
+                  <button
+                    class="border border-black text-gray-600 py-1 w-full rounded-lg shadow-lg"
+                  >
+                    Ver todo <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+                <div class="flex lg:py-3 xl:py-6 justify-center">
+                  <a href=""
+                    ><i
+                      class="fa-solid fa-circle-xmark text-4xl text-emerald-600"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="flex flex-col font-medium text-lg">
+          <li>
+            <button
+              id="mega-menu-dropdown-button-women"
+              data-dropdown-toggle="mega-menu-dropdown-women"
+              class="w-full p-2 font-medium rounded-lg"
+              [ngClass]="
+                isActive('women')
+                  ? 'bg-red-600 text-stone-50'
+                  : 'text-stone-600'
+              "
+              (click)="toggleButton('women')"
+            >
+              Mujer
+            </button>
+            <div
+              id="mega-menu-dropdown-women"
+              class="absolute z-10 w-screen text-sm pt-2"
+              [class.hidden]="!dropdowns['women']"
+            >
+              <div class="border shadow-md bg-stone-50">
+                <div
+                  class="grid grid-cols-3 lg:w-full lg:p-2 xl:w-8/12 mx-auto"
+                >
+                  <div class="grid col-span-2 grid-cols-3 pr-14">
+                    <div class="p-4 text-gray-500">
+                      <a href="" class="text-gray-900 text-lg">Mujer</a>
+                      <ul class="grid lg:grid-cols-1 xl:grid-cols-2 gap-2 pt-2">
+                        <li>
+                          <a href="#"> Polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Poleras </a>
+                        </li>
+                        <li>
+                          <a href="#"> Joggers y busos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de poleras </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="p-4 text-gray-500">
+                      <a href="" class="text-gray-900 text-lg">Niño</a>
+                      <ul class="grid lg:grid-cols-1 xl:grid-cols-2 gap-2 pt-2">
+                        <li>
+                          <a href="#"> Polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Poleras </a>
+                        </li>
+                        <li>
+                          <a href="#"> Joggers y busos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de poleras </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="p-4 text-gray-500">
+                      <a href="" class="text-gray-900 text-lg">Niño</a>
+                      <ul class="grid lg:grid-cols-1 xl:grid-cols-2 gap-2 pt-2">
+                        <li>
+                          <a href="#"> Polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Poleras </a>
+                        </li>
+                        <li>
+                          <a href="#"> Joggers y busos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de poleras </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="grid col-span-1 grid-cols-2">
+                    <h3 class="text-gray-600 p-2 col-span-2">
+                      Encuentra el modelo perfecto para ti, los mejores
+                      productos con un simple click.
+                    </h3>
+
+                    <div class="flex justify-center">
+                      <img
+                        class="xl:w-36 lg:w-28 lg:h-5/6"
+                        src="../../../../../assets/images/modelo_hombre.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex justify-center">
+                      <img
+                        class="xl:w-36 lg:w-28 lg:h-5/6"
+                        src="../../../../../assets/images/modelo_mujer.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-1/12 mx-auto justify-center">
+                  <button
+                    class="border border-black text-gray-600 py-1 w-full rounded-lg shadow-lg"
+                  >
+                    Ver todo <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+                <div class="flex lg:py-3 xl:py-6 justify-center">
+                  <a href=""
+                    ><i
+                      class="fa-solid fa-circle-xmark text-4xl text-emerald-600"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="flex flex-col font-medium text-lg">
+          <li>
+            <button
+              id="mega-menu-dropdown-button-boys"
+              data-dropdown-toggle="mega-menu-dropdown-boys"
+              class="w-full p-2 font-medium rounded-lg"
+              [ngClass]="
+                isActive('boys') ? 'bg-red-600 text-stone-50' : 'text-stone-600'
+              "
+              (click)="toggleButton('boys')"
+            >
+              Niños
+            </button>
+            <div
+              id="mega-menu-dropdown-boys"
+              class="absolute z-10 w-screen text-sm pt-2"
+              [class.hidden]="!dropdowns['boys']"
+            >
+              <div class="border shadow-md bg-stone-50">
+                <div
+                  class="grid grid-cols-3 lg:w-full lg:p-2 xl:w-8/12 mx-auto"
+                >
+                  <div class="grid col-span-2 grid-cols-3 pr-14">
+                    <div class="p-4 text-gray-500">
+                      <a href="" class="text-gray-900 text-lg">Mujer</a>
+                      <ul class="grid lg:grid-cols-1 xl:grid-cols-2 gap-2 pt-2">
+                        <li>
+                          <a href="#"> Polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Poleras </a>
+                        </li>
+                        <li>
+                          <a href="#"> Joggers y busos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de poleras </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="p-4 text-gray-500">
+                      <a href="" class="text-gray-900 text-lg">Hombre</a>
+                      <ul class="grid lg:grid-cols-1 xl:grid-cols-2 gap-2 pt-2">
+                        <li>
+                          <a href="#"> Polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Poleras </a>
+                        </li>
+                        <li>
+                          <a href="#"> Joggers y busos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de poleras </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="p-4 text-gray-500">
+                      <a href="" class="text-gray-900 text-lg">Niño</a>
+                      <ul class="grid lg:grid-cols-1 xl:grid-cols-2 gap-2 pt-2">
+                        <li>
+                          <a href="#"> Polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Poleras </a>
+                        </li>
+                        <li>
+                          <a href="#"> Joggers y busos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de poleras </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="grid col-span-1 grid-cols-2">
+                    <h3 class="text-gray-600 p-2 col-span-2">
+                      Encuentra el modelo perfecto para ti, los mejores
+                      productos con un simple click.
+                    </h3>
+
+                    <div class="flex justify-center">
+                      <img
+                        class="xl:w-36 lg:w-28 lg:h-5/6"
+                        src="../../../../../assets/images/modelo_hombre.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex justify-center">
+                      <img
+                        class="xl:w-36 lg:w-28 lg:h-5/6"
+                        src="../../../../../assets/images/modelo_mujer.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-1/12 mx-auto justify-center">
+                  <button
+                    class="border border-black text-gray-600 py-1 w-full rounded-lg shadow-lg"
+                  >
+                    Ver todo <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+                <div class="flex lg:py-3 xl:py-6 justify-center">
+                  <a href=""
+                    ><i
+                      class="fa-solid fa-circle-xmark text-4xl text-emerald-600"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="flex flex-col font-medium text-lg">
+          <li>
+            <button
+              id="mega-menu-dropdown-button-unisex"
+              data-dropdown-toggle="mega-menu-dropdown-unisex"
+              class="w-full p-2 font-medium rounded-lg"
+              [ngClass]="
+                isActive('unisex')
+                  ? 'bg-red-600 text-stone-50'
+                  : 'text-stone-600'
+              "
+              (click)="toggleButton('unisex')"
+            >
+              Unisex
+            </button>
+            <div
+              id="mega-menu-dropdown-unisex"
+              class="absolute z-10 w-screen text-sm pt-2"
+              [class.hidden]="!dropdowns['unisex']"
+            >
+              <div class="border shadow-md bg-stone-50">
+                <div
+                  class="grid grid-cols-3 lg:w-full lg:p-2 xl:w-8/12 mx-auto"
+                >
+                  <div class="grid col-span-2 grid-cols-3 pr-14">
+                    <div class="p-4 text-gray-500">
+                      <a href="" class="text-gray-900 text-lg">Mujer</a>
+                      <ul class="grid lg:grid-cols-1 xl:grid-cols-2 gap-2 pt-2">
+                        <li>
+                          <a href="#"> Polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Poleras </a>
+                        </li>
+                        <li>
+                          <a href="#"> Joggers y busos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de poleras </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="p-4 text-gray-500">
+                      <a href="" class="text-gray-900 text-lg">Hombre</a>
+                      <ul class="grid lg:grid-cols-1 xl:grid-cols-2 gap-2 pt-2">
+                        <li>
+                          <a href="#"> Polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Poleras </a>
+                        </li>
+                        <li>
+                          <a href="#"> Joggers y busos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de poleras </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="p-4 text-gray-500">
+                      <a href="" class="text-gray-900 text-lg">Niño</a>
+                      <ul class="grid lg:grid-cols-1 xl:grid-cols-2 gap-2 pt-2">
+                        <li>
+                          <a href="#"> Polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Poleras </a>
+                        </li>
+                        <li>
+                          <a href="#"> Joggers y busos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de polos </a>
+                        </li>
+                        <li>
+                          <a href="#"> Pack de poleras </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="grid col-span-1 grid-cols-2">
+                    <h3 class="text-gray-600 p-2 col-span-2">
+                      Encuentra el modelo perfecto para ti, los mejores
+                      productos con un simple click.
+                    </h3>
+
+                    <div class="flex justify-center">
+                      <img
+                        class="xl:w-36 lg:w-28 lg:h-5/6"
+                        src="../../../../../assets/images/modelo_hombre.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex justify-center">
+                      <img
+                        class="xl:w-36 lg:w-28 lg:h-5/6"
+                        src="../../../../../assets/images/modelo_mujer.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-1/12 mx-auto justify-center">
+                  <button
+                    class="border border-black text-gray-600 py-1 w-full rounded-lg shadow-lg"
+                  >
+                    Ver todo <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+                <div class="flex lg:py-3 xl:py-6 justify-center">
+                  <a href=""
+                    ><i
+                      class="fa-solid fa-circle-xmark text-4xl text-emerald-600"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="flex flex-col font-medium text-lg">
+          <li>
+            <button
+              id="mega-menu-dropdown-button-basic"
+              data-dropdown-toggle="mega-menu-dropdown-basic"
+              class="w-full p-2 font-medium rounded-lg"
+              [ngClass]="
+                isActive('basic')
+                  ? 'bg-red-600 text-stone-50'
+                  : 'text-stone-600'
+              "
+              (click)="toggleButton('basic')"
+            >
+              Basicos
+            </button>
+            <div
+              id="mega-menu-dropdown-basic"
+              class="absolute z-10 w-screen text-sm pt-2"
+              [class.hidden]="!dropdowns['basic']"
+            >
+              <div class="grid grid-cols-3 bg-stone-50 border shadow-md">
+                <div class="grid justify-center p-4 text-gray-600">
+                  <ul
+                    class="space-y-4"
+                    aria-labelledby="mega-menu-dropdown-button"
+                  >
+                    <li>
+                      <a href="#" class="text-gray-600"> About Us </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-600"> Library </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-600"> Resources </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-600"> Pro Version </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="grid justify-center p-4 text-gray-600">
+                  <ul class="space-y-4">
+                    <li>
+                      <a href="#"> Blog </a>
+                    </li>
+                    <li>
+                      <a href="#"> Newsletter </a>
+                    </li>
+                    <li>
+                      <a href="#"> Playground </a>
+                    </li>
+                    <li>
+                      <a href="#"> License </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="grid justify-center p-4 text-gray-600">
+                  <ul class="space-y-4">
+                    <li>
+                      <a href="#"> Contact Us </a>
+                    </li>
+                    <li>
+                      <a href="#"> Support Center </a>
+                    </li>
+                    <li>
+                      <a href="#"> Terms </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- MENU SM-MD -->
+      <div class="col-span-1 lg:hidden md:order-1">
+        <button class="flex mx-auto" (click)="toggleMenu()">
+          <i class="fa-solid fa-bars text-3xl" [class.hidden]="menuOpen"></i>
+          <i class="fa-solid fa-xmark text-3xl" [class.hidden]="!menuOpen"></i>
+        </button>
+        <div
+          class="bg-white h-screen w-screen absolute z-10 mt-2"
+          [class.hidden]="!menuOpen"
+        >
+          <ul class="flex flex-col text-xl bg-stone-100 justify-center">
+            <li
+              class="border flex justify-between items-center"
+              id="mobile_menu"
+            >
+              <a
+                href=""
+                class="flex w-full h-full py-3 px-4"
+                (click)="toggleSubmenu($event, 'men')"
+                >Hombre</a
+              >
+              <i
+                class="fa-solid fa-chevron-right pr-4"
+                (click)="toggleSubmenu($event, 'men')"
+              ></i>
+            </li>
+            <li
+              class="border flex justify-between items-center"
+              id="mobile_menu"
+            >
+              <a
+                href=""
+                class="flex w-full h-full py-3 px-4"
+                (click)="toggleSubmenu($event, 'women')"
+                >Mujer</a
+              >
+              <i
+                class="fa-solid fa-chevron-right pr-4"
+                (click)="toggleSubmenu($event, 'women')"
+              ></i>
+            </li>
+            <li
+              class="border flex justify-between items-center"
+              id="mobile_menu"
+            >
+              <a
+                href=""
+                class="flex w-full h-full py-3 px-4"
+                (click)="toggleSubmenu($event, 'boys')"
+                >Niños</a
+              >
+              <i
+                class="fa-solid fa-chevron-right pr-4"
+                (click)="toggleSubmenu($event, 'boys')"
+              ></i>
+            </li>
+            <li
+              class="border flex justify-between items-center"
+              id="mobile_menu"
+            >
+              <a
+                href=""
+                class="flex w-full h-full py-3 px-4"
+                (click)="toggleSubmenu($event, 'unisex')"
+                >Unisex</a
+              >
+              <i
+                class="fa-solid fa-chevron-right pr-4"
+                (click)="toggleSubmenu($event, 'unisex')"
+              ></i>
+            </li>
+            <li
+              class="border flex justify-between items-center"
+              id="mobile_menu"
+            >
+              <a
+                href=""
+                class="flex w-full h-full py-3 px-4"
+                (click)="toggleSubmenu($event, 'basic')"
+                >Basicos</a
+              >
+              <i
+                class="fa-solid fa-chevron-right pr-4"
+                (click)="toggleSubmenu($event, 'basic')"
+              ></i>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-slate-300 h-screen w-screen absolute z-20 mt-2"
+          [class.hidden]="!dropdowns['men']"
+          id="mobile-panel-0-0"
+        >
+          <ul class="flex flex-col text-xl bg-stone-100 justify-center">
+            <li class="border flex items-center">
+              <i
+                class="fa-solid fa-chevron-left py-3 px-4"
+                (click)="goBack($event)"
+              ></i
+              ><a
+                href=""
+                class="font-medium w-full h-full py-2 px-4"
+                (click)="goBack($event)"
+                >Atras</a
+              >
+            </li>
+            <li class="border py-3 px-4"><a href="">Polos</a></li>
+            <li class="border py-3 px-4"><a href="">Poleras</a></li>
+            <li class="border py-3 px-4"><a href="">Joggers y Busos</a></li>
+            <li class="border py-3 px-4"><a href="">Pack de polos</a></li>
+            <li class="border py-3 px-4"><a href="">Pack de poleras</a></li>
+          </ul>
+        </div>
+        <div
+          class="bg-slate-300 h-screen w-screen absolute z-20 mt-2"
+          [class.hidden]="!dropdowns['women']"
+          id="mobile-panel-1-0"
+        >
+          <ul class="flex flex-col text-xl bg-stone-100 justify-center">
+            <li class="border flex items-center">
+              <i
+                class="fa-solid fa-chevron-left py-3 px-4"
+                (click)="goBack($event)"
+              ></i
+              ><a
+                href=""
+                class="font-medium w-full h-full py-2 px-4"
+                (click)="goBack($event)"
+                >Atras</a
+              >
+            </li>
+            <li class="border py-3 px-4"><a href="">Polos</a></li>
+            <li class="border py-3 px-4"><a href="">Poleras</a></li>
+            <li class="border py-3 px-4"><a href="">Joggers y Busos</a></li>
+            <li class="border py-3 px-4"><a href="">Pack de polos</a></li>
+            <li class="border py-3 px-4"><a href="">Pack de poleras</a></li>
+          </ul>
+        </div>
+        <div
+          class="bg-slate-300 h-screen w-screen absolute z-20 mt-2"
+          [class.hidden]="!dropdowns['boys']"
+          id="mobile-panel-2-0"
+        >
+          <ul class="flex flex-col text-xl bg-stone-100 justify-center">
+            <li class="border flex items-center">
+              <i
+                class="fa-solid fa-chevron-left py-3 px-4"
+                (click)="goBack($event)"
+              ></i
+              ><a
+                href=""
+                class="font-medium w-full h-full py-2 px-4"
+                (click)="goBack($event)"
+                >Atras</a
+              >
+            </li>
+            <li class="border py-3 px-4"><a href="">Polos</a></li>
+            <li class="border py-3 px-4"><a href="">Poleras</a></li>
+            <li class="border py-3 px-4"><a href="">Joggers y Busos</a></li>
+            <li class="border py-3 px-4"><a href="">Pack de polos</a></li>
+            <li class="border py-3 px-4"><a href="">Pack de poleras</a></li>
+          </ul>
+        </div>
+        <div
+          class="bg-slate-300 h-screen w-screen absolute z-20 mt-2"
+          [class.hidden]="!dropdowns['unisex']"
+          id="mobile-panel-3-0"
+        >
+          <ul class="flex flex-col text-xl bg-stone-100 justify-center">
+            <li class="border flex items-center">
+              <i
+                class="fa-solid fa-chevron-left py-3 px-4"
+                (click)="goBack($event)"
+              ></i
+              ><a
+                href=""
+                class="font-medium w-full h-full py-2 px-4"
+                (click)="goBack($event)"
+                >Atras</a
+              >
+            </li>
+            <li class="border py-3 px-4"><a href="">Polos</a></li>
+            <li class="border py-3 px-4"><a href="">Poleras</a></li>
+            <li class="border py-3 px-4"><a href="">Joggers y Busos</a></li>
+            <li class="border py-3 px-4"><a href="">Pack de polos</a></li>
+            <li class="border py-3 px-4"><a href="">Pack de poleras</a></li>
+          </ul>
+        </div>
+        <div
+          class="bg-slate-300 h-screen w-screen absolute z-20 mt-2"
+          [class.hidden]="!dropdowns['basic']"
+          id="mobile-panel-4-0"
+        >
+          <ul class="flex flex-col text-xl bg-stone-100 justify-center">
+            <li class="border flex items-center">
+              <i
+                class="fa-solid fa-chevron-left py-3 px-4"
+                (click)="goBack($event)"
+              ></i
+              ><a
+                href=""
+                class="font-medium w-full h-full py-2 px-4"
+                (click)="goBack($event)"
+                >Atras</a
+              >
+            </li>
+            <li class="border py-3 px-4"><a href="">Polos</a></li>
+            <li class="border py-3 px-4"><a href="">Poleras</a></li>
+            <li class="border py-3 px-4"><a href="">Joggers y Busos</a></li>
+            <li class="border py-3 px-4"><a href="">Pack de polos</a></li>
+            <li class="border py-3 px-4"><a href="">Pack de poleras</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="grid col-span-2 grid-cols-4 md:col-span-8 md:grid-cols-8 lg:col-span-5 lg:grid-cols-6 lg:justify-end xl:col-span-5 xl:grid-cols-7 lg:pl-2 order-3 ml-4 md:m-0"
+    >
+      <!-- BUSCADOR -->
+      <div
+        class="grid lg:col-span-3 xl:col-span-4 border md:border-0 md:col-span-5 md:mx-16 lg:m-0"
+      >
+        <form class="flex items-center justify-center w-full">
+          <input
+            type="text"
+            id="simple-search"
+            class="hidden bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg md:flex lg:flex xl:flex w-full p-2"
+            placeholder="Buscar productos"
+          />
+          <button
+            type="submit"
+            class="flex flex-col items-center md:mx-2 md:p-1 md:w-11 text-sm font-medium text-stone-600 md:text-stone-50 md:bg-gray-700 hover:bg-blue-900"
+          >
+            <i class="fa-solid fa-magnifying-glass text-2xl md:text-lg"></i>
+            <span class="text-xs font-semibold md:hidden">Buscar</span>
+          </button>
+        </form>
+      </div>
+      <!-- BOTONES DE USUARIO-->
+      <div class="flex border justify-center">
+        <a href="" class="">
+          <button
+            class="flex flex-col items-center bg-stone-50 text-stone-600 p-1 md:p-2 lg:p-1"
+          >
+            <i class="fa-solid fa-truck-fast text-2xl md:text-3xl"></i>
+            <span class="text-xs font-semibold">Pedidos</span>
+          </button>
+        </a>
+      </div>
+      <div class="flex border justify-center">
+        <a href="" class="">
+          <button
+            class="flex flex-col items-center bg-stone-50 text-stone-600 p-1 md:p-2 lg:p-1"
+          >
+            <i class="fa-solid fa-bag-shopping text-2xl md:text-3xl"></i>
+            <span class="text-xs font-semibold">Carrito</span>
+          </button>
+        </a>
+      </div>
+      <div class="flex border justify-center">
+        <a href="" class="">
+          <button
+            class="flex flex-col items-center bg-stone-50 text-stone-600 p-1 md:p-2 lg:p-1"
+          >
+            <i class="fa-solid fa-user text-2xl md:text-3xl"></i>
+            <span class="text-xs font-semibold">Cuenta</span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
