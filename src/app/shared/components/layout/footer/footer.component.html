@@ -9,8 +9,10 @@
         [itemsText]="
           '¡Buena ropa a pequeños precios! Somos la cadena de tiendas con los mejores precios en prendas para mujeres, hombres y niños. Estamos en todo el Perú. ¡Compara nuestros precios!'
         "
-        [isOpen]="accordionStates['sobreNosotros']"
         [isList]="false"
+        (click)="toggleAccordion('SOBRE NOSOTROS')"
+        [isOpen]="openAccordion === 'SOBRE NOSOTROS'"
+
       >
       </app-accordion-item>
       <hr class="w-10/12 mx-auto" />
@@ -22,7 +24,8 @@
           'Tiendas',
           'Contactanos'
         ]"
-        [isOpen]="accordionStates['sumaq']"
+        (click)="toggleAccordion('SUMAQ')"
+        [isOpen]="openAccordion === 'SUMAQ'"
       ></app-accordion-item>
       <hr class="w-10/12 mx-auto" />
       <app-accordion-item
@@ -34,13 +37,15 @@
           'Política de envíos',
           'Política de privacidad'
         ]"
-        [isOpen]="accordionStates['atencionCliente']"
+        (click)="toggleAccordion('ATENCION AL CLIENTE')"
+        [isOpen]="openAccordion === 'ATENCION AL CLIENTE'"
       ></app-accordion-item>
       <hr class="w-10/12 mx-auto" />
       <app-accordion-item
         [title]="'LIBRO DE RECLAMACIONES'"
         [itemsList]="['Poner un reclamo']"
-        [isOpen]="accordionStates['atencionCliente']"
+        (click)="toggleAccordion('LIBRO DE RECLAMACIONES')"
+        [isOpen]="openAccordion === 'LIBRO DE RECLAMACIONES'"
       ></app-accordion-item>
 
       <hr class="w-10/12 mx-auto" />

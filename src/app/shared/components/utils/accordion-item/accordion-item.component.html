@@ -2,7 +2,7 @@
   <button
     class="flex py-4 px-6 w-full items-center"
     [ngClass]="{ 'active-accordion': isOpen }"
-    (click)="toggleAccordion()"
+    (click)="toggleAccordion(title)"
   >
     <span class="w-5/6 text-start font-semibold text-sm">{{ title }}</span>
     <i class="fa-solid fa-plus w-1/6 text-end px-2" [class.hidden]="isOpen"></i>
