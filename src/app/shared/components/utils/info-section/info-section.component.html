@@ -1,0 +1,36 @@
+<div class="mx-auto">
+  <p class="pb-4 font-medium">{{ title }}</p>
+  <p class="p-4 text-xs" *ngIf="paragraphText">{{ paragraphText }}</p>
+  <div class="lg:flex lg:justify-center xl:flex xl:justify-center custom:flex custom:justify-center">
+    <img
+      class="w-32"
+      *ngIf="imageUrl"
+      [src]="imageUrl"
+      alt="{{ imageAlt }}"
+    />
+  </div>
+  <ul class="text-xs space-y-2" *ngIf="links">
+    <li *ngFor="let link of links">
+      <a href="">
+        {{ link }}
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- <div class="mx-auto">
+  <p
+    class="pb-4 font-medium lg:text-center xl:text-center custom:text-center"
+  >
+    LIBRO DE RECLAMACIONES
+  </p>
+  <ul
+    class="text-xs space-y-2 lg:flex lg:justify-center xl:flex xl:justify-center custom:flex custom:justify-center"
+  >
+    <a href=""
+      ><img
+        class="w-32"
+        src="../../../../../assets/images/libro.png"
+        alt=""
+    /></a>
+  </ul>
+</div> -->

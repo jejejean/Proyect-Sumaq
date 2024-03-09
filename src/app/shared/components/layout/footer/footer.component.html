@@ -4,166 +4,83 @@
     <div
       class="w-full mx-auto bg-zinc-800 mt-6 pb-5 text-stone-100 hidden sm:block"
     >
-      <h2 class="w-11/12 mx-auto">
-        <button
-          class="flex py-4 px-6 w-full items-center"
-          [ngClass]="{ 'active-accordion': accordionStates['nosotros'] }"
-          (click)="toggleAccordion('nosotros')"
-        >
-          <span class="w-5/6 text-start font-semibold text-sm"
-            >SOBRE NOSOTROS</span
-          >
-          <i
-            class="fa-solid fa-plus w-1/6 text-end px-2"
-            [class.hidden]="accordionStates['nosotros']"
-          ></i>
-          <i
-            class="fa-solid fa-minus w-1/6 text-end px-2"
-            [class.hidden]="!accordionStates['nosotros']"
-          ></i>
-        </button>
-        <div *ngIf="accordionStates['nosotros']">
-          <P class="pt-2 pb-6 px-8 text-xs"
-            >¡Buena ropa a pequeños precios! Somos la cadena de tiendas con los
-            mejores precios en prendas para mujeres, hombres y niños. Estamos en
-            todo el Perú. ¡Compara nuestros precios!</P
-          >
-        </div>
-      </h2>
+      <app-accordion-item
+        [title]="'SOBRE NOSOTROS'"
+        [itemsText]="
+          '¡Buena ropa a pequeños precios! Somos la cadena de tiendas con los mejores precios en prendas para mujeres, hombres y niños. Estamos en todo el Perú. ¡Compara nuestros precios!'
+        "
+        [isOpen]="accordionStates['sobreNosotros']"
+        [isList]="false"
+      >
+      </app-accordion-item>
       <hr class="w-10/12 mx-auto" />
-      <h2 class="w-11/12 mx-auto">
-        <button
-          class="flex py-4 px-6 w-full items-center"
-          [ngClass]="{ 'active-accordion': accordionStates['sumaq'] }"
-          (click)="toggleAccordion('sumaq')"
-        >
-          <span class="w-5/6 text-start font-semibold text-sm">SUMAQ</span>
-          <i
-            class="fa-solid fa-plus w-1/6 text-end px-2"
-            [class.hidden]="accordionStates['sumaq']"
-          ></i>
-          <i
-            class="fa-solid fa-minus w-1/6 text-end px-2"
-            [class.hidden]="!accordionStates['sumaq']"
-          ></i>
-        </button>
-        <div *ngIf="accordionStates['sumaq']">
-          <ul class="pt-2 pb-6 px-8 text-xs space-y-3">
-            <li><a href="">Trabaja con nosotros</a></li>
-            <li><a href="">Nosotros</a></li>
-            <li><a href="">Tiendas</a></li>
-            <li><a href="">Contactanos</a></li>
-          </ul>
-        </div>
-      </h2>
+      <app-accordion-item
+        [title]="'SUMAQ'"
+        [itemsList]="[
+          'Trabaja con nosotros',
+          'Nosotros',
+          'Tiendas',
+          'Contactanos'
+        ]"
+        [isOpen]="accordionStates['sumaq']"
+      ></app-accordion-item>
       <hr class="w-10/12 mx-auto" />
-      <h2 class="w-11/12 mx-auto">
-        <button
-          class="flex py-4 px-6 w-full items-center"
-          [ngClass]="{
-            'active-accordion': accordionStates['atencionCliente']
-          }"
-          (click)="toggleAccordion('atencionCliente')"
-        >
-          <span class="w-5/6 text-start font-semibold text-sm"
-            >ATENCION AL CLIENTE</span
-          >
-          <i
-            class="fa-solid fa-plus w-1/6 text-end px-2"
-            [class.hidden]="accordionStates['atencionCliente']"
-          ></i>
-          <i
-            class="fa-solid fa-minus w-1/6 text-end px-2"
-            [class.hidden]="!accordionStates['atencionCliente']"
-          ></i>
-        </button>
-        <div *ngIf="accordionStates['atencionCliente']">
-          <ul class="pt-2 pb-6 px-8 text-xs space-y-3">
-            <li><a href="">Preguntas Frecuentes</a></li>
-            <li><a href="">Terminos y Condiciones</a></li>
-            <li><a href="">Cambios y devoluciones</a></li>
-            <li><a href="">Política de envíos</a></li>
-            <li class=""><a href="">Política de privacidad</a></li>
-          </ul>
-        </div>
-      </h2>
+      <app-accordion-item
+        [title]="'ATENCION AL CLIENTE'"
+        [itemsList]="[
+          'Preguntas Frecuentes',
+          'Terminos y Condiciones',
+          'Cambios y devoluciones',
+          'Política de envíos',
+          'Política de privacidad'
+        ]"
+        [isOpen]="accordionStates['atencionCliente']"
+      ></app-accordion-item>
       <hr class="w-10/12 mx-auto" />
-      <h2 class="w-11/12 mx-auto">
-        <button
-          class="flex py-4 px-6 w-full items-center"
-          [ngClass]="{
-            'active-accordion': accordionStates['libroDeReclamaciones']
-          }"
-          (click)="toggleAccordion('libroDeReclamaciones')"
-        >
-          <span class="w-5/6 text-start font-semibold text-sm"
-            >LIBRO DE RECLAMACIONES</span
-          >
-          <i
-            class="fa-solid fa-plus w-1/6 text-end px-2"
-            [class.hidden]="accordionStates['libroDeReclamaciones']"
-          ></i>
-          <i
-            class="fa-solid fa-minus w-1/6 text-end px-2"
-            [class.hidden]="!accordionStates['libroDeReclamaciones']"
-          ></i>
-        </button>
-        <div *ngIf="accordionStates['libroDeReclamaciones']">
-          <ul class="pt-2 pb-6 px-8 text-xs space-y-3">
-            <li><a href="">Poner un reclamo</a></li>
-          </ul>
-        </div>
-      </h2>
+      <app-accordion-item
+        [title]="'LIBRO DE RECLAMACIONES'"
+        [itemsList]="['Poner un reclamo']"
+        [isOpen]="accordionStates['atencionCliente']"
+      ></app-accordion-item>
+
       <hr class="w-10/12 mx-auto" />
     </div>
     <!-- LISTAS-->
-    <div class="bg-zinc-800 mt-6 text-stone-100 ">
-      <div class="grid mx-auto grid-cols-3 gap-3 p-4 pb-6 sm:hidden lg:w-10/12 xl:w-9/12 custom:w-9/12">
-        <div class="grid  col-span-3 text-center gap-2 mx-auto custom:w">
-          <p class="font-medium">SOBRE NOSOTROS</p>
-          <p class="p-4 text-xs">
-            ¡Buena ropa a pequeños precios! Somos la cadena de tiendas con los
-            mejores precios en prendas para mujeres, hombres y niños. Estamos en
-            todo el Perú. ¡Compara nuestros precios!
-          </p>
-        </div>
+    <div class="bg-zinc-800 mt-6 text-stone-100">
+      <div
+        class="grid mx-auto grid-cols-3 gap-3 p-4 pb-6 sm:hidden lg:w-10/12 xl:w-9/12 custom:w-9/12"
+      >
+        <app-info-section
+          [classList]="'grid col-span-3 text-center gap-2'"
+          title="SOBRE NOSOTROS"
+          paragraphText="¡Buena ropa a pequeños precios! Somos la cadena de tiendas con los mejores precios en prendas para mujeres, hombres y niños. Estamos en todo el Perú. ¡Compara nuestros precios!"
+        ></app-info-section>
         <hr class="col-span-3 border-stone-200" />
-        <div class=" mx-auto">
-          <p class="pb-4 font-medium">SUMAQ</p>
-          <ul class="text-xs space-y-2">
-            <li><a href="">Trabaja con nosotros</a></li>
-            <li><a href="">Nosotros</a></li>
-            <li><a href="">Tiendas</a></li>
-            <li><a href="">Contactanos</a></li>
-          </ul>
-        </div>
-        <div class="mx-auto">
-          <p class="pb-4 font-medium">ATENCION AL CLIENTE</p>
-          <ul class="text-xs space-y-2">
-            <li><a href="">Preguntas Frecuentes</a></li>
-            <li><a href="">Terminos y Condiciones</a></li>
-            <li><a href="">Cambios y devoluciones</a></li>
-            <li><a href="">Política de envíos</a></li>
-            <li class=""><a href="">Política de privacidad</a></li>
-          </ul>
-        </div>
-        <div class=" mx-auto">
-          <p
-            class="pb-4 font-medium lg:text-center xl:text-center custom:text-center"
-          >
-            LIBRO DE RECLAMACIONES
-          </p>
-          <ul
-            class="text-xs space-y-2 lg:flex lg:justify-center xl:flex xl:justify-center custom:flex custom:justify-center"
-          >
-            <a href=""
-              ><img
-                class="w-32"
-                src="../../../../../assets/images/libro.png"
-                alt=""
-            /></a>
-          </ul>
-        </div>
+        <app-info-section
+          title="SUMAQ"
+          [links]="[
+            'Trabaja con nosotros',
+            'Nosotros',
+            'Tiendas',
+            'Contactanos'
+          ]"
+        ></app-info-section>
+        <app-info-section
+          title="ATENCION AL CLIENTE"
+          [links]="[
+            'Preguntas Frecuentes',
+            'Terminos y Condiciones',
+            'Cambios y devoluciones',
+            'Política de envíos',
+            'Política de privacidad'
+          ]"
+        ></app-info-section>
+        <app-info-section
+          [classList]="'lg:text-center xl:text-center custom:text-center'"
+          imageAlt="Libro de reclamaciones"
+          imageUrl="/assets/images/libro.png"
+          title="LIBRO DE RECLAMACIONES"
+        ></app-info-section>
       </div>
     </div>
     <hr class="w-11/12 mx-auto border border-stone-300" />
@@ -190,3 +107,4 @@
     </div>
   </div>
 </footer>
+<!-- 195 -->

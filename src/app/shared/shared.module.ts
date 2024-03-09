@@ -5,6 +5,8 @@ import { MainComponent } from './components/layout/main/main.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { ButtonsComponent } from './components/utils/buttons/buttons.component';
+import { AccordionItemComponent } from './components/utils/accordion-item/accordion-item.component';
+import { InfoSectionComponent } from './components/utils/info-section/info-section.component';
 
 
 
@@ -14,7 +16,9 @@ import { ButtonsComponent } from './components/utils/buttons/buttons.component';
     MainComponent,
     FooterComponent,
     HeaderComponent,
-    ButtonsComponent
+    ButtonsComponent,
+    AccordionItemComponent,
+    InfoSectionComponent
   ],
   imports: [
     CommonModule

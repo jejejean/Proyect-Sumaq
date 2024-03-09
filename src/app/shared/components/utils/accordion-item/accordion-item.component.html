@@ -1,0 +1,22 @@
+<h2 class="w-11/12 mx-auto">
+  <button
+    class="flex py-4 px-6 w-full items-center"
+    [ngClass]="{ 'active-accordion': isOpen }"
+    (click)="toggleAccordion()"
+  >
+    <span class="w-5/6 text-start font-semibold text-sm">{{ title }}</span>
+    <i class="fa-solid fa-plus w-1/6 text-end px-2" [class.hidden]="isOpen"></i>
+    <i
+      class="fa-solid fa-minus w-1/6 text-end px-2"
+      [class.hidden]="!isOpen"
+    ></i>
+  </button>
+  <div *ngIf="isOpen">
+    <ul *ngIf="itemsList" class="pt-2 pb-6 px-8 text-xs space-y-3">
+      <li *ngFor="let item of itemsList">
+        <a href="">{{ item }}</a>
+      </li>
+    </ul>
+    <p *ngIf="itemsText" class="pt-2 pb-6 px-8 text-xs">{{ itemsText }}</p>
+  </div>
+</h2>
